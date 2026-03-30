@@ -8,6 +8,8 @@ ARG POSTGRES_MAJOR=18
 
 FROM docker.io/postgres:${POSTGRES_MAJOR}-trixie
 
+ARG POSTGRES_MAJOR
+
 # Install build dependencies and pg_cron extension
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \

@@ -4,7 +4,7 @@ with cron extension preinstalled
 ## installing pg_cron
 
 - see https://github.com/citusdata/pg_cron#installing-pg_cron
-- tl;dr: see ./Dockerfile
+- tl;dr: see [Dockerfile](./Dockerfile)
 
 
 ## upgrading major pgres versions
