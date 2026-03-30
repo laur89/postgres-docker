@@ -1,0 +1,16 @@
+name: Build image
+
+on:
+  workflow_dispatch:
+  push:
+    tags:        
+      - '*'
+
+jobs:
+  call-build:
+    if: ${{ github.ref == 'refs/heads/master' }}
+    uses: haridusministeerium/workflows/.github/workflows/docker-build-publish.yml@master
+    secrets: inherit
+    with:
+      image: layr/postgres-cron
+
